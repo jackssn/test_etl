@@ -1,0 +1,18 @@
+{
+    "source":
+        {
+            "login": "postgres",
+            "password": "postgres",
+            "hostname": "localhost",
+            "port": "",
+            "db_name": "test_s"
+        },
+    "destination":
+        {
+            "login": "postgres",
+            "password": "postgres",
+            "hostname": "localhost",
+            "port": "",
+            "db_name": "postgres"
+        }
+}
