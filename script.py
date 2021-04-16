@@ -38,9 +38,9 @@ if not os.path.exists(LAST_UPDATED_AT_PATH):
                       "ALTER TABLE raw_order ALTER COLUMN id SET DEFAULT nextval('raw_order_id_seq');"
         conn.execute(query_alter)
         print('Type of id-column updated successfully.')
-else:
-    with open(LAST_UPDATED_AT_PATH, 'r') as f:
-        last_updated_at = f.read()
+
+with open(LAST_UPDATED_AT_PATH, 'r') as f:
+    last_updated_at = f.read()
 
 # Load data from source_db to temp .csv
 engine = create_engine(f"postgresql://{source_login}:{source_pass}@{source_host}{source_port}/{source_name}")
